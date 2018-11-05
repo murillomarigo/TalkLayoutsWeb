@@ -1,0 +1,22 @@
+#topo,
+#rodape {
+    border: solid 1px #ccc;
+    height: 150px;
+}
+
+#esquerda,
+#direita {
+    background-color: aqua;
+}
+
+#conteudo {
+    background-color: cornflowerblue;
+}
+
+
+#esquerda,
+#conteudo,
+#direita {
+    float: left;
+    height: 500px;
+}

@@ -1,0 +1,48 @@
+#site {
+    width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#topo,
+#rodape {
+    border: solid 1px #ccc;
+    height: 150px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#esquerda,
+#direita {
+    background-color: aqua;
+    flex-grow: 1;
+    height: 200px;
+}
+
+#direita{
+    display: none;
+}
+
+#conteudo {
+    background-color: cornflowerblue;
+    flex-grow: 2;
+    height: 400px;
+}
+
+@media screen and (min-width: 992px) {
+    #main {
+        flex-direction: row;
+    }
+
+    #main>div {
+        height: 500px;
+    }
+
+    #direita{
+        display: block;
+    }
+}

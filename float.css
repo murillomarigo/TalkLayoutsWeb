@@ -10,21 +10,35 @@
 }
 
 #main>div {
-    float: left;
-    height: 500px;
+    height: 200px;
 }
 
 #esquerda,
 #direita {
-    width: 20%;
     background-color: aqua;
 }
 
 #conteudo {
-    width: 60%;
     background-color: cornflowerblue;
 }
 
 #rodape {
     clear: both;
+}
+
+@media screen and (min-width: 992px) {
+    #main>div {
+        float: left;
+        height: 500px;
+    }
+
+    #conteudo {
+
+        width: 60%;
+    }
+
+    #esquerda,
+    #direita {
+        width: 20%;
+    }
 }
