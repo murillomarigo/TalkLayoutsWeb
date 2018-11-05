@@ -1,0 +1,30 @@
+#site {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+#topo,
+#rodape {
+    border: solid 1px #ccc;
+    height: 150px;
+}
+
+#main>div {
+    float: left;
+    height: 500px;
+}
+
+#esquerda,
+#direita {
+    width: 20%;
+    background-color: aqua;
+}
+
+#conteudo {
+    width: 60%;
+    background-color: cornflowerblue;
+}
+
+#rodape {
+    clear: both;
+}
