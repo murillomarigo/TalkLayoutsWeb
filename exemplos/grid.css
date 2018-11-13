@@ -16,67 +16,42 @@ body {
 
 #site {
     margin: 0 auto;
-    background-color: #ccc;
+    border: 2px solid #ccc;
     position: relative;
     overflow: hidden;
-    padding: 15px;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    grid-area: header;
-}
-
-header img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-aside {
-    grid-area: menu;
-}
-
-aside ul {
-    padding: 0;
+h1 {
+    grid-area: title;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid rgba(100, 100, 100, 0.5);
     margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-aside ul li a {
-    color: #003892;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
 }
 
 #meta {
     grid-area: meta;
     display: flex;
     justify-content: space-between;
-}
-
-h2 {
-    grid-area: title
+    background-color: rgba(0, 255, 0, 0.5);
+    border: 2px solid rgba(100, 100, 100, 0.5);
 }
 
 img {
     grid-area: picture;
     width: 100%;
+    border: 2px solid rgba(100, 100, 100, 0.5);
 }
 
 #content {
-    grid-area: content
+    grid-area: content;
+    background-color: rgba(0, 0, 255, 0.5);
+    border: 2px solid rgba(100, 100, 100, 0.5);
 }
 
 footer {
     grid-area: footer;
+    background-color: rgba(255, 255, 0, 0.5);
+    border: 2px solid rgba(100, 100, 100, 0.5);
 }
 
 footer ul {
@@ -91,25 +66,13 @@ footer ul {
     #site {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
-            "header header"
             "title title"
             "picture picture"
-            "content content"
             "meta meta"
-            "menu footer"
-    }
-
-    aside {
-        height: 70px;
-    }
-
-    aside ul {
-        justify-content: flex-start;
-        flex-direction: column;
-        height: 100%;
-        flex-wrap: wrap;
+            "content content"
+            "footer footer"
     }
 }
 
@@ -119,35 +82,11 @@ footer ul {
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            "header meta"
-            "header picture"
-            "menu picture"
-            "menu title"
-            "menu content"
-            "menu footer"
-    }
-
-    aside ul {
-        justify-content: flex-start;
-        flex-direction: column;
-        height: 100%;
-        flex-wrap: wrap;
-        padding-right: 15px;
-    }
-
-    aside ul li {
-        margin-bottom: 10px;
-    }
-
-    aside ul li a {
-        display: inline-flex;
-        height: 50px;
-        width: 100%;
-    }
-
-    img {
-        width: initial;
+            "picture picture"
+            "meta title"
+            "meta content"
+            "meta footer"
     }
 }
