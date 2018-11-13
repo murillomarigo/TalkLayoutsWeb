@@ -29,15 +29,52 @@
 
 - Defini como os elementos filho de um container vão se organizar e ocupar seu espaço
 - Mesmo sendo possível fazer fazer layout complexos com o flexbox, o ideal é usa-lo para organizar o conteúdo dentro de cada bloco do site
+- Unidimensional
 
 ## Grid CSS
 
+- Bidimensional
+- Elimina necessidade de containers para agrupar blocos de conteúdo
+- Curiosidade - Existe graças ao IE 10
+  
+### Conceitos
 
+- display : grid | inline-grid
+- grid track : grid-template-columns e grid-template-rows
+- tamanho usando fr (fração)  
+- grid-template-areas : Constrói o template do grid usando o nome das areas
+  
+        .item-a {
+            grid-area: header;
+        }
+        .item-b {
+            grid-area: main;
+        }
+        .item-c {
+            grid-area: sidebar;
+        }
+        .item-d {
+            grid-area: footer;
+        }
+
+        .container {
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "header header header header"
+                "main main ` sidebar"
+                "footer footer footer footer";
+        }
+
+### Hands on
+
+### Mas e browser antigos
+
+- Mostre o layout mobile
 
 ## Referencias
 
 - https://en.wikipedia.org/wiki/Web_design#1988–2001
-- https://en.wikipedia.org/wiki/Spacer_GIF
 - https://www.codigofonte.com.br/codigos/estrutura-de-uma-pagina-para-sites-em-tabelas
 - https://tableless.com.br/introducao-sobre-media-queries/
 - https://getbootstrap.com/docs/4.1/layout/grid/
@@ -45,3 +82,5 @@
 - https://960.gs
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - https://www.youtube.com/watch?v=7kVeCqQCxlk
+- https://caniuse.com/#feat=css-grid
+- https://gridbyexample.com

@@ -5,18 +5,16 @@
 }
 
 #esquerda,
+#conteudo,
+#direita {
+    height: 500px;
+}
+
+#esquerda,
 #direita {
     background-color: aqua;
 }
 
 #conteudo {
     background-color: cornflowerblue;
-}
-
-
-#esquerda,
-#conteudo,
-#direita {
-    float: left;
-    height: 500px;
 }
