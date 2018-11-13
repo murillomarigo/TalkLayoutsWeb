@@ -12,25 +12,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*RESET*/
+/*SITE*/
 
 #site {
-    width: 1024px;
     margin: 0 auto;
     background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
 }
 
 header {
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: relative;
-}
-
-header #open-menu{
-    position: absolute;
+    grid-area: header;
 }
 
 header img {
@@ -40,6 +38,116 @@ header img {
 }
 
 aside {
-    position: absolute;
-    top: 0;
+    grid-area: menu;
+}
+
+aside ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+aside ul li a {
+    color: #003892;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#meta {
+    grid-area: meta;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    grid-area: title
+}
+
+img {
+    grid-area: picture;
+    width: 100%;
+}
+
+#content {
+    grid-area: content
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+@media all and (min-width: 840px) and (max-width : 1024px) {
+    #site {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "header header"
+            "title title"
+            "picture picture"
+            "content content"
+            "meta meta"
+            "menu footer"
+    }
+
+    aside {
+        height: 70px;
+    }
+
+    aside ul {
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    #site {
+        width: 1024px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "header meta"
+            "header picture"
+            "menu picture"
+            "menu title"
+            "menu content"
+            "menu footer"
+    }
+
+    aside ul {
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100%;
+        flex-wrap: wrap;
+        padding-right: 15px;
+    }
+
+    aside ul li {
+        margin-bottom: 10px;
+    }
+
+    aside ul li a {
+        display: inline-flex;
+        height: 50px;
+        width: 100%;
+    }
+
+    img {
+        width: initial;
+    }
 }
