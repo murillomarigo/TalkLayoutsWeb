@@ -84,3 +84,7 @@
 - https://www.youtube.com/watch?v=7kVeCqQCxlk
 - https://caniuse.com/#feat=css-grid
 - https://gridbyexample.com
+
+## Slides
+
+[Apresentação](https://docs.google.com/presentation/d/1ts-aM4DYA5ftCXMhV_uOdOkKXD032anqYioeB3sVu80/edit?usp=sharing)
